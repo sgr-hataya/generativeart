@@ -1,3 +1,8 @@
+#
+# .gitignore
+#
+
+# github default Processing
 .DS_Store
 applet
 application.linux-arm64
@@ -8,3 +13,7 @@ application.windows32
 application.windows64
 application.macosx
 out
+
+# ignore image file
+*.png
+*.jpg
