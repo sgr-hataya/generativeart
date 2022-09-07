@@ -49,6 +49,13 @@ void keyPressed(){
   
   // Shift+sキーを押下で画像保存
   if (key == 'S'){
-    saveFrame(filename + ".png");
+    int Y = year();
+    int M = month();
+    int D = day();
+    int h = hour();
+    int m = minute();
+    int s = second();
+    String FILENAME = APPNAME + "-" + Y + M + D + h + m + s;
+    saveFrame(FILENAME + ".png");
   }
 }
