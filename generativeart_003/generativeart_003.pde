@@ -1,5 +1,5 @@
 // Global変数
-String filename = "generativeart_003";
+String APPNAME = "generativeart_003";
 
 // セットアップ
 void setup() {
@@ -14,22 +14,22 @@ void draw() {
 }
 
 // 罫線を描画する関数
-void drawLine(int num){
+void drawLine(int NUM){
   background(255);
   noStroke();
-  for (int i = 0; i < num; i++) {
-    float x = random(width);
-    float y = random(height);
-    float l = random(30, 150);
-    float w = random(0, 10);
-    float x1 = x;
-    float y1 = y;
-    float x2 = x1 + l;
-    float y2 = y1;    
+  for (int i = 0; i < NUM; i++) {
+    float X = random(width);
+    float Y = random(height);
+    float L = random(30, 150);
+    float W = random(0, 10);
+    float X1 = X;
+    float Y1 = Y;
+    float X2 = X1 + L;
+    float Y2 = Y1;    
     stroke(0, 50);
     strokeCap(PROJECT);
-    strokeWeight(w);
-    line(x1, y1, x2, y2);
+    strokeWeight(W);
+    line(X1, Y1, X2, Y2);
   }
   
   // 著作権を表示
