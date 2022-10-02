@@ -21,20 +21,19 @@ void drawRectangle(int NUM){
   for (int i = 0; i < NUM; i++) {
     float X = random(width);
     float Y = random(height);
-    float L = random(30, 150);
-    float W = random(0, 10);
-    float X1 = X;
-    float Y1 = Y;
-    float X2 = X1 + L;
-    float Y2 = Y1 + L;  
+    float W = random(100);
+    float H = random(100);
     float COLOR_R = random(0, 255);
     float COLOR_G = random(0, 255);
     float COLOR_B = random(0, 255);
-    color COLOR_RGB = color(COLOR_R, COLOR_G, COLOR_B);
-    stroke(COLOR_RGB, 50);
+    float COLOR_A = random(0, 255);
+    color COLOR_RGBA = color(COLOR_R, COLOR_G, COLOR_B, COLOR_A);
+    fill(COLOR_RGBA);
+    stroke(COLOR_RGBA);
     strokeCap(PROJECT);
-    strokeWeight(W);
-    line(X1, Y1, X2, Y2);
+    strokeJoin(BEVEL);
+    strokeWeight(5);
+    rect(X, Y, W, H);
   }
 }
 
