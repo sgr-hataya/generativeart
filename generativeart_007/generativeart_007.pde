@@ -10,12 +10,12 @@ void setup() {
 
 // 描画
 void draw() {
-  drawLine(100);
+  drawRectangle(100);
   copyright();
 }
 
-// 罫線を描画する関数
-void drawLine(int NUM){
+// 短形を描画する関数
+void drawRectangle(int NUM){
   background(255);
   noStroke();
   for (int i = 0; i < NUM; i++) {
